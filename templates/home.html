@@ -3,7 +3,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-
+{% load staticfiles %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -12,13 +12,23 @@
 
   <title>Evgenii Ikonnikov</title>
 
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
 
 
+  <!-- Bootstrap core CSS -->
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+  <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#7952b3">
 
   <style>
         .bd-placeholder-img {
@@ -42,15 +52,17 @@
 
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="">Evgenii Ikonnikov</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link" href="">Programming</a>
-          <a class="nav-item nav-link" href="">Education</a>
-          <a class="nav-item nav-link" href="">Additional info</a>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}">Evgenii Ikonnikov</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+          <div class="navbar-nav d-flex">
+            <a class="nav-link " aria-current="page" href="{% url 'programmimg' %}">Programming skills</a>
+            <a class="nav-link" href="">LinkedIn</a>
+            <a class="nav-link" href="">Resume</a>
+          </div>
         </div>
       </div>
     </nav>
@@ -63,12 +75,13 @@
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="fw-light">Portfolio website of <br/> Evgenii Ikonnikov</h1>
         <br/>
-        <p class="lead text-muted">Hello everyone! I am a physicist with 4 years of experience in Python development. I am applying for the position of Django developer (Junior). On this site you can find all the information about my previous experience and skills. Enjoy! </p>
 
         <p>
-          <a href="#" class="btn btn-primary my-2">Main call to action</a>
-          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+          <img class="img-fluid" src="{% static 'Jeka.jpg' %}">
         </p>
+
+        <p class="lead text-muted">Hello everyone! I am a physicist with 4 years of experience in Python development. I am applying for the position of Django developer (Junior). On this site you can find all the information about my previous experience and skills. Enjoy! </p>
+
       </div>
     </div>
   </section>
@@ -81,12 +94,12 @@
 
         <div class="col">
           <div class="card shadow-sm">
-            <img src="" />
+            <img class = 'img-fluid' src="{% static 'Python.png' %}" height="200"/>
             <div class="card-body bg-grey">
 
 
               <p >
-                <a href="education.html" class="w-100 btn btn-lg btn-outline-primary"">Programming languages</a>
+                <a href="education.html" class="w-100 btn btn-lg btn-outline-primary"">Programming skills</a>
               </p>
 
               <div class="d-flex justify-content-between align-items-center">
@@ -102,7 +115,7 @@
 
         <div class="col">
           <div class="card shadow-sm">
-            <img src="" />
+            <img class="img-fluid" src="{% static 'education.png' %}" heigth = 200 />
             <div class="card-body bg-grey">
               <p >
                 <a href="education.html" class="w-100 btn btn-lg btn-outline-primary"">Education</a>
@@ -122,12 +135,12 @@
 
         <div class="col">
           <div class="card shadow-sm">
-            <img src="" />
+            <img class="img-fluid" src="{% static 'Additional_information.png' %}" heigth = 200/>
             <div class="card-body bg-grey">
 
 
               <p >
-                <a href="education.html" class="w-100 btn btn-lg btn-outline-primary"">Title</a>
+                <a href="education.html" class="w-100 btn btn-lg btn-outline-primary"">Additional information</a>
               </p>
 
               <div class="d-flex justify-content-between align-items-center">
@@ -149,12 +162,17 @@
 
   </main>
 
+<br/>
+<br/>
+<br/>
+
+
   <footer class="text-muted">
     <div class="container text-center">
-      <p>© Nick Walter {% now "Y" %}</p>
+      <p>© Evgenii Ikonnikov {% now "Y" %}</p>
       </div>
   </footer>
-
+  <br/>
   <!-- Bootstrap core JavaScript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
