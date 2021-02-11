@@ -60,8 +60,8 @@
         <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
           <div class="navbar-nav d-flex">
             <a class="nav-link " aria-current="page" href="{% url 'programmimg' %}">Programming skills</a>
-            <a class="nav-link" href="">LinkedIn</a>
-            <a class="nav-link" href="">Resume</a>
+            <a class="nav-link" href="{% url 'education' %}">Education</a>
+            <a class="nav-link" href="{% url 'add_info' %}">Additional information</a>
           </div>
         </div>
       </div>
@@ -87,6 +87,9 @@
   </section>
 
 
+
+
+
   <div class="album py-5 bg-light">
     <div class="container">
 
@@ -99,7 +102,7 @@
 
 
               <p >
-                <a href="education.html" class="w-100 btn btn-lg btn-outline-primary"">Programming skills</a>
+                <a href="{% url 'programmimg' %}" class="w-100 btn btn-lg btn-outline-primary"">Programming skills</a>
               </p>
 
               <div class="d-flex justify-content-between align-items-center">
@@ -118,7 +121,7 @@
             <img class="img-fluid" src="{% static 'education.png' %}" heigth = 200 />
             <div class="card-body bg-grey">
               <p >
-                <a href="education.html" class="w-100 btn btn-lg btn-outline-primary"">Education</a>
+                <a href="{% url 'education' %}" class="w-100 btn btn-lg btn-outline-primary"">Education</a>
               </p>
 
               <div class="d-flex justify-content-between align-items-center">
@@ -140,7 +143,7 @@
 
 
               <p >
-                <a href="education.html" class="w-100 btn btn-lg btn-outline-primary"">Additional information</a>
+                <a href="{% url 'add_info' %}" class="w-100 btn btn-lg btn-outline-primary"">Additional information</a>
               </p>
 
               <div class="d-flex justify-content-between align-items-center">
