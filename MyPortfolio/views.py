@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from publications.models import publication
 
 
 def home(request):
@@ -11,4 +12,5 @@ def education(request):
     return render(request, 'education.html')
 
 def add_info(request):
-    return render(request, 'add_info.html')            
+    pubs = publication.objects
+    return render(request, 'add_info.html', {'pubs':pubs})            
