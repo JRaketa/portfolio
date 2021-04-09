@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'blog.apps.BlogConfig',
     'publications.apps.PublicationsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -127,6 +128,9 @@ os.path.join(BASE_DIR, 'MyPortfolio/static/')
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 try:
     from local_settings import *

@@ -13,4 +13,6 @@ def education(request):
 
 def add_info(request):
     pubs = publication.objects
-    return render(request, 'add_info.html', {'pubs':pubs})            
+    return render(request, 'add_info.html', {'pubs':pubs})
+
+   

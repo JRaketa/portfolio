@@ -60,9 +60,9 @@
         <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
           <div class="navbar-nav d-flex">
             <a class="nav-link " aria-current="page" href="{% url 'programmimg' %}">Programming skills</a>
-            <a class="nav-link " href="{% url 'education' %}">Education</a>
-            <a class="nav-link active" href="{% url 'add_info' %}">Additional information</a>
-            <a class="nav-link" href="{% url 'blog' %}">My blog</a>
+            <a class="nav-link" href="{% url 'education' %}">Education</a>
+            <a class="nav-link" href="{% url 'add_info' %}">Additional information</a>
+            <a class="nav-link active" href="{% url 'blog' %}">My blog</a>
           </div>
         </div>
       </div>
@@ -74,56 +74,25 @@
     <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Additional information</h1>
+        <h1 class="fw-light">My blog</h1>
         <br/>
+        <br/>
+        <h2>Latest Posts</h2>
+
+        <hr/>
+
+  {% for blog in blogs.all %}
+    {{blog.title}}
+    <img src="{{blog.picture.url}}"/>
+  {% endfor %}
+
 
       </div>
     </div>
   </section>
 
 
-  <section class="py-5 text-center container">
-  <div class="row py-lg-5">
-    <div class="col-lg-6 col-md-8 mx-auto">
-      <h2 class="fw-light text-muted">About me</h2>
-      <br/>
-      <p class="lead text-muted">
-          I am 28 years old (not married). Recently I succesfully finished PhD programm in <a href="https://mbi-berlin.de/homepage">Max-Born-Institute</a>.
-          Next, I am going to continue my carrier in IT as the most fast growing area nowadays.
-          In this website all my acievements in the past are listed. I hope you find me as a grown and responsible person that deserves to work in IT.
-          Currently I am living in Berlin. You can find my <a href="#">recommendation letter</a> from my previous work in Max-Born-Institute and <a href="#">CV</a> in the files attached.
-      </p>
-      <br/>
-      <h2 class="fw-light text-muted">Contact Info</h2>
-      <br/>
-      <p class="lead text-muted">
-           Email: <a href="mailto:evgeniy3129@gmail.com">evgeniy3129@gmail.com</a>
-           <br/>
-           <a href="https://www.linkedin.com/in/%D0%B5%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D0%B9-%D0%B8%D0%BA%D0%BE%D0%BD%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2-4b09661b7/">LinkedIn</a>
-      </p>
-      <br/>
-      <h2 class="fw-light text-muted">Hobbies</h2>
-      <p class="lead text-muted">
-             Hiking, kayaking, skiing, guitar, singing, Blender, Unity.
-      </p>
-      <br/>
-      <h2 class="fw-light text-muted">
-             Publications list
-      </h2>
-      <br/>
 
-      {% for public in pubs.all %}
-      <p class="text-start text-muted"">{{public.names}}</p>
-      <p class="text-start fw-light fs-9">{{public.title}}</p>
-      <p class="text-start fst-italic">{{public.journal}}, ({{public.year_pretty}})</p>
-      <br/>
-      <br/>
-
-      {% endfor %}
-
-    </div>
-  </div>
-</section>
 
 
 
