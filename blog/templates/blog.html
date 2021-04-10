@@ -81,34 +81,72 @@
 
         <hr/>
 
-  {% for blog in blogs.all %}
-    {{blog.title}}
-    <img src="{{blog.picture.url}}"/>
-  {% endfor %}
-
 
       </div>
-    </div>
+  </div>
   </section>
 
 
+{% for blog in blogs %}
+<div class="container pt-2">
+
+
+      <div class="row pt-2">
+    <div class="col-3">
+      <img src="{{blog.picture.url}}" class="img-fluid" width="200">
+      <br/>
+      {{blog.pub_date}}
+    </div>
+    <div class="col-6" >
+     <h3>{{blog.title}}</h3>
+      <p>{{blog.text_body}}</p>
+      <a href="{{blog.web_link}}">{{blog.web_link}}</a>
+
+    </div>
+
+
+
+    </div>
+    <br/>
+</div>
+
+
+
+
+    {% endfor %}
 
 
 
 
 
 
+{% if blogs.has_other_pages %}
+        <ul class="pagination">
+                {% if blogs.has_previous %}
+                  <a href="?page={{ blogs.previous_page_number }}" class="w-1 btn btn-lg btn-outline-primary">&laquo;</a>
+                {% else %}
+                  <a class="w-1 btn btn-lg btn-outline-primary disabled"><span>&laquo;</span></a>
+                {% endif %}
+
+                {% for i in blogs.paginator.page_range %}
+                  {% if blogs.number == i %}
+
+                    <li><a href="?page={{ i }}" class=" active w-1 btn btn-lg btn-outline-primary">{{ i }}</a></li>
+                  {% else %}
+                    <li><a href="?page={{ i }}" class="w-1 btn btn-lg btn-outline-primary">{{ i }}</a></li>
+                  {% endif %}
+                {% endfor %}
+
+                {% if blogs.has_next %}
+                    <a href="?page={{ blogs.next_page_number }}" class="w-1 btn btn-lg btn-outline-primary">&raquo;</a>
+                {% else %}
+                  <li class="w-1 btn btn-lg btn-outline-primary disabled"><span>&raquo;</span></li>
+                {% endif %}
+
+        </ul>
 
 
-
-
-
-
-
-
-
-
-
+{% endif %}
 
 
 
@@ -116,6 +154,11 @@
 
 
   </main>
+
+
+
+
+
 
 <br/>
 <br/>
