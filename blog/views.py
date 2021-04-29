@@ -5,7 +5,7 @@ from .models import Blog
 
 def blog(request):
     blogs_list = Blog.objects.order_by('-pub_date')
-    paginator = Paginator(blogs_list, 1)
+    paginator = Paginator(blogs_list, 15)
 
     page = request.GET.get('page')
     blogs = paginator.get_page(page)

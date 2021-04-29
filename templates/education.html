@@ -74,7 +74,7 @@
     <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Education</h1>
+        <h1 class="fw-light text-muted">Education</h1>
         <br/>
           <img class="img-fluid" src="{% static 'education.png' %}" width = 200 />
       </div>
@@ -96,12 +96,25 @@
             <div class="card-body bg-grey">
 
 
-              <p > <a href="https://english.spbu.ru/">Saint Petersburg State University</a>, Russia.
+              <p class="text-muted"> <a href="https://english.spbu.ru/">Saint Petersburg State University</a>, Russia.
                 <br/>
                 Department of Physics.
                 <br/>
-                2011 - 2015 - Bachelor programm.
-              </p>
+                <em>2011 - 2015</em> - Bachelor programme.
+                <br/>
+                <br/>
+
+                My bachelor programme included mostly theoretical courses of math,
+                 physics and computational methods without significant involment into the experimental part.
+
+               </p>
+                <h5 class="text-muted"> Courses:</h5>
+
+                <p class="text-muted">
+                  Higher Algebra, Higher Mathematics, Mathematical Analysis, Probability Theory, Numerical methods,
+                  Methods of Computational Physics, Methods of Mathematical Physics, Statistical Physics and Thermodynamics, Statistics of Macromolecules.
+
+                </p>
 
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
@@ -118,14 +131,36 @@
           <div class="card shadow-sm">
             <img class="img-fluid" src="{% static 'spbu.png' %}" heigth = 200/>
             <div class="card-body bg-grey">
-              <p >
+              <p class="text-muted">
                 <a href="https://english.spbu.ru/">Saint Petersburg State University</a>, Russia.
                 <br/>
                 Department of Physics.
                 <br/>
-                2015 - 2017 - Master programm.
+                <em>2015 - 2017</em> - Master programme.
 
                 <a href="{% static 'Evgenii_Ikonnikov_Master_diploma.pdf' %}">My diploma.</a>
+
+                <br/>
+                <br/>
+
+                During the master programme I applied knowledge obtained in the bachelor programme to real experimental
+                tasks. My master project consisted  of software creation (<em>Python</em> and <em>Octave</em>)
+                for experimental data
+                processing and analysis, theoretical interpretation and a short experiment.
+                <br/>
+                <br/>
+                (See my internships list below)
+
+                <br/>
+                <h5 class="text-muted">Thesis title:</h5>
+                <p class="text-muted">
+                  "Relaxation properties of synthetic polypeptides in different solvents".
+                </p>
+
+
+
+
+
               </p>
 
               <div class="d-flex justify-content-between align-items-center">
@@ -154,13 +189,29 @@
                 <br/>
                 <br/>
                 <br/>
-              <p >
+              <p class="text-muted">
                  <a href=" https://www.fu-berlin.de/">Frei University Berlin</a> Germany.
                  <br/>
                  Department of Physics.
                  <br/>
-                 2017 - now - PhD programm.
-                 <a href="{% static 'FU_certificate.pdf' %}">Certificate.</a>
+                 <em>2019 - now </em> - PhD programme.
+                 <a href="{% static 'FU_enrollment.pdf' %}">Certificate of enrollment.</a>
+
+                 <br/>
+                 <br/>
+
+                 During the project I applied all the theoretical knowledge gained earlier to the acquisition, processing and analysis of data obtained during the course of
+                 a high level experiment at <a href="https://mbi-berlin.de/homepage"><em>Max-Born-Institute</em></a> <em>(MBI)</em>.
+                 Currently, all the programming and analytical work for my thesis has been finished.
+                 The thesis structure and content had been approved by my mentor,
+                 but some text editing work still remains.
+                 The defence is expected for this year.
+
+
+
+
+
+
               </p>
 
               <div class="d-flex justify-content-between align-items-center">
@@ -183,17 +234,43 @@
 
 
 
+
+
+
+
+
   <section class="py-5 text-center container text-muted">
   <div class="row py-lg-5">
     <div class="col-lg-6 col-md-8 mx-auto">
-      <h1 class="fw-light">Internships</h1>
+      <h1 class="fw-light text-muted">Internships</h1>
       <br/>
-      <img src="{% static 'MBI.png' %}" width = 400/>
+      <img class="img-responsive center-block" src="{% static 'MBI.png' %}" width = 400/>
       <br/>
       <br/>
-      2016 - <a href="https://mbi-berlin.de/homepage">Max-Born-Institute</a> (Berlin) (2 months) <a href="{%static 'intern_2016.pdf'%}">Funding Decision</a>
       <br/>
-      2017 - Max-Born-Institute (Berlin) (1 months) <a href="{%static 'intern_2017.pdf'%}">Funding Decision</a>
+      <div class="card">
+        <p class="text-muted">
+          <br/>
+        During my master programme I had two internships in Berlin at the <em>(MBI)</em>.
+        The first internship was dedicated to theoretical calculation of quantum
+        chemical properties of organic molecules using the quantum package <em>Orca</em>
+        and the programming language <em>Python</em>. After leaving a positive impact on my colleagues during my internship in 2016, I was invited to pursue a second internship with them just several months later.
+
+        By the end of the intership in 2017, the <em>(MBI)</em> administration offered me to
+        join the institute for a PhD programme.
+        <br/>
+
+        </p>
+      </div>
+
+
+
+      <br/>
+      2016 - (2 months) <a href="{%static 'intern_2016.pdf'%}">Funding Decision</a>
+      <br/>
+      Succesfull
+      <br/>
+      2017 - (1 months) <a href="{%static 'intern_2017.pdf'%}">Funding Decision</a>
     </div>
   </div>
 </section>

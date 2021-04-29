@@ -74,10 +74,10 @@
     <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">My blog</h1>
+        <h1 class="fw-light text-muted">My blog</h1>
         <br/>
         <br/>
-        <h2>Latest Posts</h2>
+        <h2 class="text-muted">Latest Posts</h2>
 
         <hr/>
 
@@ -92,15 +92,15 @@
 
 
       <div class="row pt-2">
-    <div class="col-3">
+    <div class="col-3 text-muted">
       <img src="{{blog.picture.url}}" class="img-fluid" width="200">
       <br/>
       {{blog.pub_date}}
     </div>
-    <div class="col-6" >
+    <div class="col-6 text-muted" >
      <h3>{{blog.title}}</h3>
       <p>{{blog.text_body}}</p>
-      <a href="{{blog.web_link}}">{{blog.web_link}}</a>
+      
 
     </div>
 
